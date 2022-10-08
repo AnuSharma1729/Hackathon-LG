@@ -1,0 +1,11 @@
+.audio{
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    
+    background-color: #A28089;
+    padding: 10px;
+}
+*{
+    background-color: #A28089;
+}
