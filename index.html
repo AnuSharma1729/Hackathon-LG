@@ -44,9 +44,11 @@
       </nav>
       <a id="download">Download</a>
 <button id="stop">Stop</button>
+<button id="start">Start</button>
 <script>
   const downloadLink = document.getElementById('download');
   const stopButton = document.getElementById('stop');
+  const startButton = document.getElementById('start');
 
 
   const handleSuccess = function(stream) {
@@ -67,7 +69,13 @@
       mediaRecorder.stop();
     });
 
-    mediaRecorder.start();
+    startButton.addEventListener('click',function(){
+      while(recordedChunks.length>0){
+        recordedChunks.pop();
+      }
+      mediaRecorder.start();
+    });
+
   };
 
   navigator.mediaDevices.getUserMedia({ audio: true, video: false })
