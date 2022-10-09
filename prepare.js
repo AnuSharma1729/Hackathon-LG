@@ -10,13 +10,13 @@ var config = {
         auth: authKey
     }
 }
-// axios(config)
-// 	.then(function (response) {
-// 		console.log(JSON.stringify(response.data));
-// 	})
-// 	.catch(function (error) {
-// 		console.log(error);
-// 	});
+axios(config)
+	.then(function (response) {
+		console.log(JSON.stringify(response.data));
+	})
+	.catch(function (error) {
+		console.log(error);
+	});
 
 function addSong(filepath,cid,name,artist,genre){
     var data = new FormData();
