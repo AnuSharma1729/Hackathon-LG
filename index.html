@@ -45,6 +45,10 @@
       <a id="download">Download</a>
 <button id="stop">Stop</button>
 <button id="start">Start</button>
+    <form enctype="multipart/form-data" action="http://localhost:3000/upload/audio" method="post">
+  <input type="file" id="song" name="filename">
+  <input type="submit">
+</form>
 <script>
   const downloadLink = document.getElementById('download');
   const stopButton = document.getElementById('stop');
